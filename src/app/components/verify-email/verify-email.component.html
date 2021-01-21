@@ -1,0 +1,19 @@
+<div class="container">
+  <div class="text-center">
+    <img src="/assets/bt-background.png" alt="Banca Tramsilvania" style="padding-top: 6rem; " >
+  </div>
+  <div class="row justify-content-center p-4"> 
+    <div class="col-md-6">
+      <h1 style="padding-bottom: 6rem;padding-top: 2rem; text-align: center;">Thank You for Signing up</h1>
+      <div class="formGroup" *ngIf="ngAuthService.userState as user">
+        <h4 style="text-align: center;">Confirmation mail has been sent to <strong>{{user.email}}</strong>.</h4>
+      </div>
+      <div class="formGroup" style="margin-top: 5%; text-align: center;">
+        <button type="button" class="btn btn-warning" (click)="ngAuthService.SendVerificationMail()" style="margin-top: 5%">Resend Verification Email</button>
+      </div>
+      <div class="redirectToLogin" style="margin-top: 5%; text-align: center;">
+        <span class="text-warning">Please try to <a href="#" class="redirect" routerLink="/sign-in" class="text-warning">Signin</a></span>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,26 @@
+<div class="container">
+  <div class="text-center">
+    <img src="/assets/bt-background.png" alt="Banca Tramsilvania" style="padding-top: 6rem; " >
+  </div>
+  <div class="row justify-content-center p-4"> 
+    <div class="col-md-6">
+      <h1 style="padding-bottom: 6rem; padding-top: 2rem; text-align: center;">Welcome to Banca Transilvania</h1>
+      <h4>Username</h4>  
+      <div class="form-group">         
+        <input type="text" class="form-control" placeholder="Username" #userName required style="background-color: #ffffffff; color: black; opacity: 0.8;">
+      </div>
+      <h4>Password</h4>  
+      <div class="formGroup">
+        <input type="password" class="form-control" placeholder="Password" #userPassword required style="background-color: #ffffffff; color: black; opacity: 0.8;">
+      </div>
+      <div class="formGroup" style="margin-top: 5%; text-align: center;">
+        <input type="button" class="btn btn-warning" value="Sign In" (click)="ngAuthService.SignIn(userName.value, userPassword.value)">
+        <button type="button" class="btn btn-warning" (click)="ngAuthService.GoogleAuth()" style="margin-left: 5%;">Log in with Google</button>
+      </div>
+      <div class="formGroup" class="forgotPassword" style="margin-top: 5%; text-align: center;">
+        <a href="#" class="text-warning" routerLink="/forgot-password" style="margin-top: 5%; margin-right: 5%;">Forgot Password?</a>
+        <span class="text-warning">Not Sign Up yet? <a href="#" class="redirect" routerLink="/sign-up" class="text-warning">Please Sign Up here!</a></span>
+      </div>
+    </div>
+  </div>
+</div>

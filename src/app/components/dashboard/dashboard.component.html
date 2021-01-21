@@ -1,0 +1,17 @@
+<div class="container">
+  <div class="text-center">
+    <img src="/assets/bt-background.png" alt="Banca Tramsilvania" style="padding-top: 6rem; " >
+  </div>
+  <div class="row justify-content-center p-4">
+    <div class="col-md-6">
+      <div class="row" *ngIf="ngAuthService.userState as user">
+        <h1 style="padding-bottom: 6rem;padding-top: 2rem;">You are logged in as</h1>
+        <div class="form-group">
+          <h4>User ID: <strong>{{user.uid}}</strong></h4>
+        </div>
+        <div class="form-group">
+          <h4>Email: <strong>{{user.email}}</strong></h4>
+        <input type="button" class="btn btn-warning" value="Sign Out" (click)="ngAuthService.SignOut()"  style="margin-top: 5%; text-align: center;"/>
+   </div>
+  </div>
+</div>
